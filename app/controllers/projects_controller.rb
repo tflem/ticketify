@@ -15,4 +15,10 @@ class ProjectsController < ApplicationController
     else
       # notta yet
     end
+
+    private
+
+    def project_params
+      params.require(:project).permit(:name, :description)
+    end 
 end
