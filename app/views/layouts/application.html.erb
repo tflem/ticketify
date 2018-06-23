@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= @title || "Ticketify" %></title>
+    <title>
+      <% if content_for? (:title) %>
+        <%= yield(:title) %>
+      <% else %>
+        Ticketify
+      <% end %>
+    </title>      
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
