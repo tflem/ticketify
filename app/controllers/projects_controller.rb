@@ -10,7 +10,7 @@ class ProjectsController < ApplicationController
     @project = Project.create(project_params)
 
     if @project.save
-      flash[:notice] = "The project has been created."
+      flash[:notice] = "Project has been created."
       redirect_to @project
     else
       # notta yet
