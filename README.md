@@ -1,24 +1,38 @@
-# README
+# Ticketify
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> A project management ticketing application, which features the following tools:
 
-Things you may want to cover:
+* Ruby 2.5.1
+* Ruby on Rails 5.2.0
+* HTML and Sass
+* PostgreSQL 10
+* Testing Framework: Rspec 3.7.2
+* Bulma: CSS Framework Based on Flexbox 0.7.1
 
-* Ruby version
+## Setup
 
-* System dependencies
+How to run tests:
 
-* Configuration
+```
+% rails test
+```
 
-* Database creation
+How to run the development console:
 
-* Database initialization
+```
+% rails console
+```
 
-* How to run the test suite
+How to run the development server:
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+% rails server
+```
 
-* Deployment instructions
+How to prepare (create and migrate) DB for `development` and `test` environments:
 
-* ...
+```
+% rails db:create
+
+% rails db:migrate
+```
