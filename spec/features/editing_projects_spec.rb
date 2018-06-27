@@ -11,9 +11,16 @@ RSpec.feature "Users can edit existing projects" do
 
   scenario "with valid attributes" do
     fill_in "Name",	with: "Visual Studio"
-    click_button "Update Project"
+    click_button "Update Project"  
     
     expect(page).to have_content "Project has been updated."
     expect(page).to have_content "Visual Studio"
+  end
+
+  scenario "when providing invalid atttributes" do
+    fill_in "Name",	with: ""
+    click_button "Update Project" 
+
+    expect(page).to have_content "Project has not been updated."
   end
 end
