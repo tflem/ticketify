@@ -13,13 +13,12 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 gem 'bulma-rails', '~> 0.7.1'
+gem 'font-awesome-sass', '~> 5.0.13'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do  
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem "rspec-rails", '~> 3.7.0'
-  gem 'rspec-simplecov'
-  gem 'simplecov-console'
+  gem "rspec-rails", '~> 3.7.0'  
 end
 
 group :development do
@@ -34,6 +33,8 @@ group :test do
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
   gem 'factory_bot_rails'
+  gem 'rspec-simplecov'
+  gem 'simplecov-console'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
