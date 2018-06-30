@@ -80,3 +80,7 @@ a.destroy {
 .notification-alert {  
   @extend .is-danger;
 }
+
+form {
+  max-width: 500px;
+}
