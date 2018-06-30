@@ -1,16 +1,16 @@
-<div class="title">
-  <h1>Your Projects</h1>
-</div>
+<header>
+  <h1 class="title">List of Projects</h1>
 
-<div>
-  <ul class="actions">
-    <li><%= link_to "New Project", new_project_path, class: "button is-primary is-large" %></li>
-  </ul>
-</div>
+  <div class="actions">
+    <%= link_to "New Project",
+        new_project_path,
+        class: "new" %>      
+  </div>
+</header>
 
 <div id="projects">
   <% @projects.each do |project| %>
     <h2><%= link_to project.name, project %></h2>
-    <p><%= project.description %></p>
+      <p><%= project.description %></p>
   <% end %>
 </div>
