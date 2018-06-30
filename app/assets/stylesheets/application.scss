@@ -20,7 +20,7 @@
 
 header {
   position: relative;
-  padding-bottom: 0em;         
+  padding-bottom: 0em;      
   
   &:first-child {
     margin-top: 20px;
@@ -36,7 +36,8 @@ div.actions {
 a.new, a.edit, a.destroy {   
   @extend .button; 
   @extend .fas;
-  @extend .is-rounded;
+  @extend .is-rounded; 
+  font-family: Arial, Helvetica, sans-serif;  
 
   &:before {
     font-family: "FontAwesome";    
@@ -81,6 +82,8 @@ a.destroy {
   @extend .is-danger;
 }
 
-form {
-  max-width: 500px;
+form { max-width: 500px; }
+
+.fas {
+  padding-right: 0.3em;  
 }
