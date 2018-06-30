@@ -13,6 +13,70 @@
  *= require_tree .
  *= require_self
  */
-@import "bulma";
-@import "font-awesome-sprockets";
-@import "font-awesome";
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
+ @import "projects";
+ @import "bulma";
+
+header {
+  position: relative;
+  padding-bottom: 0em;         
+  
+  &:first-child {
+    margin-top: 20px;
+  }    
+}
+
+div.actions {
+  position: absolute;
+  bottom: -2px;
+  right: 2px;  
+}
+
+a.new, a.edit, a.destroy {   
+  @extend .button; 
+  @extend .fas;
+  @extend .is-rounded;
+
+  &:before {
+    font-family: "FontAwesome";    
+    padding-right: 0.5em;
+  }
+}
+
+a.new {
+  @extend .is-primary;
+
+  &:before {
+    @extend .fa-plus;
+  }
+}
+
+a.edit {
+  @extend .is-info;
+
+  &:before {
+    @extend .fa-edit;
+  }
+}
+
+a.destroy {
+  @extend .is-danger;  
+
+  &:before {
+    @extend .fa-trash;
+  }
+}
+
+.notification {
+  @extend .notification;
+  margin-top: 1.3em;  
+}
+
+.notification-notice {      
+  @extend .is-success;
+}
+
+.notification-alert {  
+  @extend .is-danger;
+}
