@@ -17,11 +17,13 @@
   </head>
 
   <body>
-    <div class="container">
-    <% flash.each do |key, message| %>
-      <div><%= message %></div>
-    <% end %>
-    <%= yield %>
+    <div class="container">      
+        <% flash.each do |key, message| %>
+          <div class="notification notification-<%= key %>">
+            <%= message %>
+          </div>     
+        <% end %>
+      <%= yield %>    
     </div>
   </body>
 </html>
