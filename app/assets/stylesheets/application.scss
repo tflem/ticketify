@@ -30,43 +30,13 @@ header {
 div.actions {
   position: absolute;
   bottom: -2px;
-  right: 2px;  
+  right: 2px;    
 }
 
-a.new, a.edit, a.destroy {   
-  @extend .button; 
-  @extend .fas;
-  @extend .is-rounded; 
-  font-family: Arial, Helvetica, sans-serif;  
-
-  &:before {
-    font-family: "FontAwesome";    
-    padding-right: 0.5em;
-  }
-}
-
-a.new {
-  @extend .is-primary;
-
-  &:before {
-    @extend .fa-plus;
-  }
-}
-
-a.edit {
-  @extend .is-info;
-
-  &:before {
-    @extend .fa-edit;
-  }
-}
-
-a.destroy {
-  @extend .is-danger;  
-
-  &:before {
-    @extend .fa-trash;
-  }
+@media (max-width: 567px) {
+  div.actions {
+    position: relative;   
+  }  
 }
 
 .notification {
@@ -74,16 +44,10 @@ a.destroy {
   margin-top: 1.3em;  
 }
 
-.notification-notice {      
-  @extend .is-success;
-}
+.notification-notice { @extend .is-success; }
 
-.notification-alert {  
-  @extend .is-danger;
-}
+.notification-alert { @extend .is-danger; }
 
 form { max-width: 500px; }
 
-.fas {
-  padding-right: 0.3em;  
-}
+.fas { padding-right: 0.3em; }

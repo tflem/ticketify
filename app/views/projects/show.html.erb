@@ -3,15 +3,16 @@
 <header>
   <h1 class="title"><%= @project.name %></h1>
 
-  <div class="actions">
-    <%= link_to "Edit Project",        
-        edit_project_path(@project),
-        class: "edit" %>    
+    <div class="actions">      
+      <%= link_to icon("fas", "edit", "Edit Project"),        
+          edit_project_path(@project),
+          class: "button is-info is-rounded" %>  
+    
 
-    <%= link_to "Delete Project",
-        project_path(@project),
-        method: :delete,
-        data: { confirm: "Are you sure you want to delete this project?" },
-        class: "destroy" %>
-  </div>
+      <%= link_to icon("fas", "trash", "Delete Project"),
+          project_path(@project),
+          method: :delete,
+          data: { confirm: "Are you sure you want to delete this project?" },
+          class: "button is-danger is-rounded" %>
+    </div>
 </header>
