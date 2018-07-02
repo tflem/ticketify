@@ -34,8 +34,8 @@ group :test do
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
   gem 'factory_bot_rails'
-  gem 'rspec-simplecov'
-  gem 'simplecov-console'
+  gem 'simplecov', require: false
+  gem 'simplecov-console', require: false
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
