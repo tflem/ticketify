@@ -25,3 +25,12 @@
         new_project_ticket_path(@project), class: "button is-primary is-rounded" %>      
   </div>
 </header>
+
+<div id="tickets">
+  <% @project.tickets.each do |ticket| %>
+    <li>
+      #<%= ticket.id %> -
+      <%= link_to ticket.name, [@project, ticket] %>
+    </li>
+  <% end %>
+</div>
