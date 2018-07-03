@@ -17,12 +17,12 @@ RSpec.feature "Users can view tickets" do
   scenario "for a given project" do
     click_link "Visual Studio Code"
 
-    expect(page).to have_content "Make it load faster!"
+    expect(page).to have_content "Add Moar Extensions!"
     expect(page).to_not have_content "Standards compliance"
     
-    click_link "Make it load faster!"
+    click_link "Add Moar Extensions"
     within("#ticket h2") do
-      expect(page).to have_content "Make it load faster!"
+      expect(page).to have_content "Add Moar Extensions"
     end
     
     expect(page).to have_content "Linters! Languages! And moar!"
