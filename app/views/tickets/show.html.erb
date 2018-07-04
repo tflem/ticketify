@@ -5,6 +5,10 @@
 
   <header>
     <h2><%= @ticket.name %></h2>
+
+    <div class="actions">
+      <%= link_to "Edit Ticket", [:edit, @project, @ticket],
+          class: "button is-primary is-rounded" %>
   </header>
 
   <%= simple_format(@ticket.description) %>
