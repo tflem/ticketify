@@ -13,6 +13,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 gem 'bulma-rails', '~> 0.7.1'
+gem 'devise', '~> 4.4.3'
 gem 'font-awesome-sass', '~> 5.0.13'
 gem 'simple_form', '~> 4.0', '>= 4.0.1'
 gem 'bootsnap', '>= 1.1.0', require: false
