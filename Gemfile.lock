@@ -259,7 +259,7 @@ DEPENDENCIES
   capybara (>= 2.15, < 4.0)
   chromedriver-helper
   coffee-rails (~> 4.2)
-  devise (~> 4.2)
+  devise (~> 4.4.3)
   factory_bot_rails
   font-awesome-sass (~> 5.0.13)
   jbuilder (~> 2.5)
