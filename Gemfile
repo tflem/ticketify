@@ -26,15 +26,17 @@ end
 group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
-  gem 'spring'
+  gem 'spring'  
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 group :test do
   gem 'capybara', '>= 2.15', '< 4.0'
+  gem 'capybara-screenshot'
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
   gem 'factory_bot_rails'
+  gem 'database_cleaner'
   gem 'simplecov', require: false
   gem 'simplecov-console', require: false
 end
