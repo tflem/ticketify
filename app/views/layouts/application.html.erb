@@ -36,10 +36,14 @@
      </div>
      <div class="navbar-end"> 
        <% if user_signed_in? %>
-         <div class="navbar-item">Signed in as <%= current_user.email %></div>         
+         <div class="navbar-item">Signed in as <%= current_user.email %></div>  
+         <%= link_to icon("fas", "sign-out-alt", "Logout"), destroy_user_session_path,
+             method: :delete, class: "navbar-item" %>       
        <% else %>          
-         <%= link_to icon("fas", "user-plus", "Sign Up"), new_user_registration_path, class: "navbar-item" %>
-         <%= link_to icon("fas", "user", "Sign In"), new_user_session_path, class: "navbar-item" %>               
+         <%= link_to icon("fas", "user-plus", "Sign Up"), new_user_registration_path,
+             class: "navbar-item" %>
+         <%= link_to icon("fas", "user", "Sign In"), new_user_session_path,
+             class: "navbar-item" %>               
      </div>
        <% end %>
     </div>
