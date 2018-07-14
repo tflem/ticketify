@@ -20,7 +20,8 @@
 
 header {
   position: relative;
-  padding-bottom: 0em;      
+  padding-bottom: 0em;    
+  margin-bottom: 0.5em;  
   
   &:first-child {
     margin-top: 20px;
@@ -51,3 +52,6 @@ div.actions {
 form { max-width: 500px; }
 
 .fas { padding-right: 0.3em; }
+
+.checkbox input { margin: 0em 0.3em 0em 0em; }
+
