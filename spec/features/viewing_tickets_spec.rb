@@ -2,13 +2,16 @@ require "rails_helper"
 
 RSpec.feature "Users can view tickets" do
   before do
+    user = FactoryBot.create(:user)
+
+
     vscode = FactoryBot.create(:project, name: "Visual Studio Code")
     FactoryBot.create(:ticket, project: vscode,
-      name: "Add Moar Extensions!",
+      user: user, name: "Add Moar Extensions!",
       description: "Linters! Languages! And moar!")
 
     op = FactoryBot.create(:project, name: "Opera Browser")
-    FactoryBot.create(:ticket, project: op,
+    FactoryBot.create(:ticket, project: op, user: user,
       name: "Standards compliance", description: "A force to be reckoned with.")
 
     visit "/"
