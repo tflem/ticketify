@@ -13,17 +13,22 @@
       <%= link_to "Delete Ticket", [@project, @ticket], method: :delete,
           data: { confirm: "Are you sure you want to delete this ticket?" },
           class: "button is-primary is-rounded" %>
+    </div>
   </header>
-
+  
   <table class="table is-fullwidth">
     <thead>
       <tr>
-      <th>User:</th>
-      <td><%= @ticket.user.email %></td>
-      <th>Description:</th>
-      <td><%= @ticket.description %></td>
-       <th>Created:</th>
-      <td><%= time_ago_in_words(@ticket.created_at) %> ago</td>
-    </tr>    
+        <th>User</th>             
+        <th>Description</th>      
+        <th>Created</th>      
+      </tr>  
+    </thead>  
+    <tbody>
+      <tr>
+        <td><%= @ticket.user.email %></td>
+        <td><%= @ticket.description %></td>
+        <td><%= time_ago_in_words(@ticket.created_at) %> ago</td>
+      </tr>
+    </body>
   </table>  
-</div>
