@@ -14,7 +14,7 @@
 How to run tests:
 
 ```
-% rails test
+% rspec spec
 ```
 
 How to run the development console:
