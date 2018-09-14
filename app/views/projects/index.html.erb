@@ -1,10 +1,12 @@
 <header>
   <h1 class="title">List of Projects</h1>
 
-  <div class="actions">
-    <%= link_to icon("fas", "plus", "New Project"),
-        new_admin_project_path, class: "button is-primary is-rounded" %>      
-  </div>
+  <% admins_only do %>
+    <div class="actions">
+      <%= link_to icon("fas", "plus", "New Project"),
+          new_admin_project_path, class: "button is-primary is-rounded" %>      
+    </div>
+  <% end %>
 </header>
 
 <div id="projects">
