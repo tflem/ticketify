@@ -19,6 +19,14 @@ RSpec.feature "Admins can change a user's details" do
     expect(page).to_not have_content user.email
   end
 
+  scenario "with invalid details" do
+    fill_in "Email", with: ""
+    fill_in "Password", with: "password"
+    click_button "Update User"
+
+    expect(page).to have_content "User has not been updated."
+  end
+
   scenario "when toggling a user's admin ability" do
     check "Admin"
     click_button "Update User"

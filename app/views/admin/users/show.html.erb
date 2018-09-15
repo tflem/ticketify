@@ -5,4 +5,9 @@
       <%= link_to icon("fas", "edit-user", "Edit User"),
           [:edit, :admin, @user], class: "button is-primary is-rounded" %>  
     </div>
+
+    <div class="actions">
+      <%= link_to icon("fas", "file", "Archive User"),
+          [:archive, :admin, @user], method: :patch, class: "button is-primary is-rounded" %>  
+    </div>
 </header>
