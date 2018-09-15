@@ -1,0 +1,8 @@
+<header>
+  <h1 class="title"><%= @user %></h1>
+  
+    <div class="actions">
+      <%= link_to icon("fas", "edit-user", "Edit User"),
+          [:edit, :admin, @user], class: "button is-primary is-rounded" %>  
+    </div>
+</header>
