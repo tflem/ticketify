@@ -14,4 +14,10 @@ RSpec.feature "Users can view projects" do
     click_link "Visual Studio Code"
     expect(page.current_url).to eq project_url(project)
   end
+
+  scenario "unless they do not have permission" do
+    FactoryBot.create(:project, name: "Hidden Data")
+    visit "/"
+    expect(page).not_to have_content "Hidden Data"
+  end
 end  
