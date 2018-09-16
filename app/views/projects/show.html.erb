@@ -3,10 +3,12 @@
 <header>
   <h1 class="title"><%= @project.name %></h1>
 
-    <div class="actions">      
-      <%= link_to icon("fas", "edit", "Edit Project"),        
-          edit_project_path(@project),
-          class: "button is-info is-rounded" %>  
+    <div class="actions"> 
+      <% if policy(@project).update? %>     
+        <%= link_to icon("fas", "edit", "Edit Project"),        
+            edit_project_path(@project),
+            class: "button is-info is-rounded" %>  
+      <% end %>
 
       <% admins_only do %>
         <%= link_to icon("fas", "trash", "Delete Project"),
