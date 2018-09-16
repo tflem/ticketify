@@ -6,14 +6,17 @@ RSpec.feature "Users can view tickets" do
 
 
     vscode = FactoryBot.create(:project, name: "Visual Studio Code")
+    assign_role!(user, :viewer, vscode)
     FactoryBot.create(:ticket, project: vscode,
       user: user, name: "Add Moar Extensions!",
       description: "Linters! Languages! And moar!")
 
     op = FactoryBot.create(:project, name: "Opera Browser")
+    assign_role!(user, :viewer, op)
     FactoryBot.create(:ticket, project: op, user: user,
       name: "Standards compliance", description: "A force to be reckoned with.")
 
+    login_as(user)
     visit "/"
   end
 

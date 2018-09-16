@@ -1,10 +1,12 @@
 require "rails_helper"
 
 RSpec.feature "Users can create tickets" do
-        let(:user) { FactoryBot.create(:user) }
+  let(:user) { FactoryBot.create(:user) }
+  
   before do
     login_as(user)
     project = FactoryBot.create(:project, name: "Opera Browser")
+    assign_role!(user, :viewer, project)
 
     visit project_path(project)
     click_link "New Ticket"
