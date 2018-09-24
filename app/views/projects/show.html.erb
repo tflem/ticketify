@@ -23,9 +23,11 @@
 <header>
   <h2 class="title">Tickets</h2>
 
-  <div class="actions">
-    <%= link_to icon("fas", "plus", "New Ticket"),
-        new_project_ticket_path(@project), class: "button is-primary is-rounded" %>      
+  <div class="actions">    
+    <% if policy(Ticket.new(project: @project)).create? %> 
+      <%= link_to icon("fas", "plus", "New Ticket"),
+          new_project_ticket_path(@project), class: "button is-primary is-rounded" %>
+    <% end %>      
   </div>
 </header>
 

@@ -9,8 +9,8 @@ unless User.exists?(email: "admin@ticketify.com")
   User.create!(email: "admin@ticketify.com", password: "password", admin: true)
 end
 
-unless User.exists?(email: "admin@ticketify.com")
-  User.create(email: "admin@ticketify.com", password: "password")
+unless User.exists?(email: "viewer@ticketify.com")
+  User.create(email: "viewer@ticketify.com", password: "password")
 end
 
 ["Visual Studio Code", "Opera Browser"].each do |name|
