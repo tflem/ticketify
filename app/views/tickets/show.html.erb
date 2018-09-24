@@ -7,9 +7,10 @@
     <h2 class="title is-2"><%= @ticket.name %></h2>
 
     <div class="actions">
-      <%= link_to "Edit Ticket", [:edit, @project, @ticket],
-          class: "button is-primary is-rounded" %>
-
+      <% if policy(@ticket).update? %>
+        <%= link_to "Edit Ticket", [:edit, @project, @ticket],
+            class: "button is-primary is-rounded" %>
+      <% end %>
       <%= link_to "Delete Ticket", [@project, @ticket], method: :delete,
           data: { confirm: "Are you sure you want to delete this ticket?" },
           class: "button is-primary is-rounded" %>
