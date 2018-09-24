@@ -20,4 +20,9 @@ class TicketPolicy < ApplicationPolicy
     record.project.has_manager?(user) ||
     (record.project.has_editor?(user) && record.user == user)
   end
+
+  def destroy?
+    user.try(:admin?) ||
+    record.project.has_manager?(user)
+  end
 end
