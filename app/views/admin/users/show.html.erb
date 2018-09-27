@@ -11,3 +11,17 @@
           [:archive, :admin, @user], method: :patch, class: "button is-primary is-rounded" %>  
     </div>
 </header>
+
+<header>
+  <h2 class="title">Roles</h2>    
+</header>
+
+<% if @user.roles.any? %>
+  <ul>
+    <% @user.roles.each do |role| %>
+      <li><%= role.project.name %>: <%= role.role.titleize %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>This user has no roles.</p>
+<% end %>
