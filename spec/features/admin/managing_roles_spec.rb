@@ -25,4 +25,18 @@ RSpec.feature "Admins can manager a user's roles" do
     expect(page).to have_content "Opera Browser: Viewer"
     expect(page).to have_content "Visual Studio Code: Manager"
   end
+
+  scenario "when assigning roles to a new user" do 
+    visit new_admin_user_path
+
+    fill_in "Email", with: "newuser@ticketify.com"
+    fill_in "Password", with: "password"
+
+    select "Editor", from: "Opera Browser"
+    click_button "Create User"
+
+    click_link "newuser@ticketify.com"
+    expect(page).to have_content "Opera Browser: Editor"
+    expect(page).not_to have_content "Visual Studio Code"
+  end
 end
