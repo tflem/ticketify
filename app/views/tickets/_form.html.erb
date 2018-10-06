@@ -3,10 +3,26 @@
     <div class="control">
       <%= f.input :name, input_html: { class: "input" },
                   wrapper: false, label_html: { class: "label" } %>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="control">
       <%= f.input :description, input_html: { class: "input" },
                   wrapper: false, label_html: { class: "label" } %>
     </div>
   </div>
 
-  <%= f.button :submit, class: "button is-primary is-rounded" %>
+  <div class="field">
+    <div class="control">
+      <%= f.input :attachment, input_html: { class: "input" },
+                  wrapper: false, label_html: { class: "label" } %>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="control">
+      <%= f.button :submit, class: "button is-primary is-rounded" %>
+    </div>
+  </div>  
 <% end %>

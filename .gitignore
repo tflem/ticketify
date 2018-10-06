@@ -26,6 +26,8 @@
 /public/assets
 .byebug_history
 
+/public/uploads
+
 # Ignore Simple Coverage
 /coverage
 

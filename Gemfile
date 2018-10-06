@@ -15,6 +15,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'bulma-rails', '~> 0.7.1'
 gem 'devise', '~> 4.4.3'
 gem 'pundit', '~> 1.1'
+gem 'carrierwave', '~> 0.11.2'
 gem 'font-awesome-sass', '~> 5.0.13'
 gem 'simple_form', '~> 4.0', '>= 4.0.1'
 gem 'bootsnap', '>= 1.1.0', require: false
